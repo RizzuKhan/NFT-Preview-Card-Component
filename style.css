@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(217, 54%, 11%);
+}
+.nft-card {
+  max-width: 280px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+.image-container {
+  position: relative;
+  cursor: pointer;
+}
+.image-container img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.overlay-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 255, 247, 0.5);
+  width: 100%;
+  height: 98%;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.overlay-icon img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.image-container:hover .overlay-icon {
+  opacity: 1;
+}
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.title {
+  color: hsl(0, 0%, 100%);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.title:hover {
+  color: hsl(178, 100%, 50%);
+}
+.description {
+  color: hsl(215, 51%, 70%);
+  font-size: 15px;
+  font-weight: 300;
+}
+.equilibrium-days-left {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+.eth-container {
+  gap: 5px;
+}
+.eth {
+  color: hsl(178, 100%, 50%);
+  font-size: 12px;
+  font-weight: 600;
+}
+.days-container {
+  gap: 5px;
+}
+.days-left {
+  color: hsl(215, 51%, 70%);
+  font-size: 12px;
+}
+.creation {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 0.7rem;
+}
+.creation img {
+  width: 24px;
+  height: 24px;
+}
+.border-line {
+  border: 0.5px solid hsl(215, 32%, 27%);
+}
+.creation-description {
+  color: hsl(215, 51%, 70%);
+  font-size: 13px;
+}
+.creation-description strong {
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+.creation-description strong:hover {
+  color: hsl(178, 100%, 50%);
+}
